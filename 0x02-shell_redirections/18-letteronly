@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -w "^(a-z) *"
+grep -w "^(a-z)"
