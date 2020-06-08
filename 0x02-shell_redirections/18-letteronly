@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -e "^(A-Z)$"
+grep -e "^(a-z)$"
