@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 # checks file stuff
-if [ -e "holbertonschool" ]
+F="holbertonschool"
+if [ -e $F ]
     then
-        echo "holbertonschool file exists"
-    if [ -s "holbertonschool" ]
+        echo "$F file exists"
+    if [ -s $F ]
         then
-            echo "holbertonschool file is not empty"
+            echo "$F file is not empty"
         else
-            echo "holbertonschool file is empty"
+            echo "$F file is empty"
     fi
-    if [ -f "holbertonschool" ]
+    if [ -f $F ]
         then
-            echo "holbertonschool is regular file"
+            echo "$F is regular file"
     fi
 else
-    echo "holbertonschool file does not exist"
+    echo "$F file does not exist"
 fi
