@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#list all
+# shellcheck disable=SC2009
+ps axu
