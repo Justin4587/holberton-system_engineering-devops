@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# prints dir contents
-for ls in *
-    do
-        echo "$ls" | cut -d '-' -f2
-done
