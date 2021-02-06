@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# prints Holberton School
+for ls in *
+    do
+        echo "$ls" | cut -d '-' -f2
+done
