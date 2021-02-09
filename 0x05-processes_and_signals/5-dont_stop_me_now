@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# forever
+trial=$(pgrep -l ./4-to_infinity_and_beyond)
+kill $trial
