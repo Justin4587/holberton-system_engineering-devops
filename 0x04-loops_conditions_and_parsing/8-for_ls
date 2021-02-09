@@ -2,5 +2,5 @@
 # prints Holberton School
 for ls in *
     do
-        echo "$ls" | cut -d '-' -f2
+        echo "$ls" | cut -d '-' -f 2-3
 done
