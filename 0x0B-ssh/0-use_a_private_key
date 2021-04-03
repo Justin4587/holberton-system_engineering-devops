@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# does computer magic
+
+ssh -i ~/.ssh/holberton ubuntu@34.73.254.4
