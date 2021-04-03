@@ -1,8 +1,9 @@
 # ssh
 
-class { 'ssh::client':
-  PasswordAuthentication  =>  'no',
-  user                    => 'ubuntu',
-  type                    => 'ssh-rsa',
-  key                     => '~/.ssh/holberton',
+file { '/home/thurman/holberton-system_engineering-devops/0x0B-ssh':
+  ensure => present
+}->
+file_line { 'Host_line':
+  line => 'Host',
+  path => '/home/thurman/holberton-system_engineering-devops/0x0B-ssh/2-ssh_config',
 }
