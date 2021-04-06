@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# happy little comment right here
+
+sudo service apache2 start
