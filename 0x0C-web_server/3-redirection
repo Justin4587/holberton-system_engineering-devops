@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# hopefully redirect
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo echo "Holberton School" | sudo tee /var/www/html/index.html
+sudo service nginx restart
+line="location /redirect_me {rewrite ^/(.*)$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;}"
+location="/etc/nginx/sites-enabled/default"
+sudo sed -i "36i $line" "$location"
+sudo service nginx restart
