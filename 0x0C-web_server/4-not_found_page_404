@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# hopefully redirect
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo echo "Holberton School" | sudo tee /var/www/html/index.html
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sudo service nginx restart
