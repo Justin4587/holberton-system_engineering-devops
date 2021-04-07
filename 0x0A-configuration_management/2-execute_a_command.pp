@@ -1,6 +1,5 @@
-# KILL IT 
+# KILL IT
 
-exec {
-  'killmenow':
+exec { 'pkill':
   command => 'pkill killmenow'
 }
