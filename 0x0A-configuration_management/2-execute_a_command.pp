@@ -1,5 +1,6 @@
 # KILL IT
 
-exec { 'pkill':
+exec {'pkill':
   command => 'pkill killmenow'
+  path    => '/usr/bin'
 }
