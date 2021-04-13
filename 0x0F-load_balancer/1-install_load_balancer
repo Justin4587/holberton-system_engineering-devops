@@ -15,5 +15,5 @@ backend web_servers
     balance roundrobin
     server 1828-web-01 34.73.254.4:80 check
     server 1828-web-02 3.82.35.197:80 check
-" >> /etc/default/haproxy.cfg
+" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
