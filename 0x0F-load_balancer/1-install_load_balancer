@@ -7,11 +7,12 @@ echo -e "
 ENABLED=1" | sudo tee -a /etc/default/haproxy
 echo -e "
 frontend myitbuddy.tech
-\tbind *:80
-\tdefault_backend web_servers
+    bind *:80
+    default_backend web_servers
+
 backend web_servers
-\tbalance roundrobin
-\tserver 1828-web-01 34.73.254.4:80 check
-\tserver 1828-web-02 3.82.35.197:80 check
+    balance roundrobin
+    server 1828-web-01 34.73.254.4:80 check
+    server 1828-web-02 3.82.35.197:80 check
 " >> /etc/default/haproxy.cfg
 sudo service haproxy restart
