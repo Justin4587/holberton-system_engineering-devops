@@ -3,6 +3,8 @@
 
 sudo apt-get -y update
 sudo apt-get -y install haproxy=1.6.\*
+echo -e "                                                                       
+ENABLED=1" | sudo tee -a /etc/default/haproxy
 echo -e "
 frontend myitbuddy.tech
 \tbind *:80
