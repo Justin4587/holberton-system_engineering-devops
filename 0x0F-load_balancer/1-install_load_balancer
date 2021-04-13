@@ -3,12 +3,9 @@
 
 sudo apt-get -y update
 sudo apt-get -y install haproxy=1.6.\*
-echo -e "                                                                       
-ENABLED=1" | sudo tee -a /etc/default/haproxy
 echo -e "
-frontend http-in
+frontend myitbuddy.tech
 \tbind *:80
-\tmode http
 \tdefault_backend web_servers
 backend web_servers
 \tbalance roundrobin
