@@ -3,4 +3,17 @@ File Edit Options Buffers Tools Sh-Script Help
 # hopefully redirect                                                            
 
 sudo apt-get -y update
-sudo apt-get -y install
+sudo apt-get -y install haproxy=1.6.\*
+echo -e "
+frontend http_front
+\tbind *:80
+\tmode http
+\tstats uri /haproxy?stats
+\tdefault_backend http_back
+
+backend http_back
+\tbalance roundrobin
+\tserver 1828-web-01 34.73.254.4:80 check
+\tserver 1828-web-02 3.82.35.197:80 check
+" | sudo tee -a /etc/default/haproxy.cfg
+sudo service haproxy restart
