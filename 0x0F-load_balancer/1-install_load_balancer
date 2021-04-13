@@ -11,5 +11,5 @@ backend web_servers
 \tbalance roundrobin
 \tserver 1828-web-01 34.73.254.4:80 check
 \tserver 1828-web-02 3.82.35.197:80 check
-" | sudo tee -a /etc/default/haproxy.cfg
+" >> /etc/default/haproxy.cfg
 sudo service haproxy restart
