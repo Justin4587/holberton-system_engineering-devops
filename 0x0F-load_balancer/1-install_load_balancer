@@ -1,0 +1,6 @@
+File Edit Options Buffers Tools Sh-Script Help                                  
+#!/usr/bin/env bash                                                             
+# hopefully redirect                                                            
+
+sudo apt-get -y update
+sudo apt-get -y install
