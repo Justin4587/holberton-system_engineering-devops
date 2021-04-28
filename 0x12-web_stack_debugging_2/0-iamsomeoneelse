@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Im a SUPER USER
+
+sudo -u "$1" whoami
