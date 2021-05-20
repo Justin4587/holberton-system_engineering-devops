@@ -9,7 +9,7 @@ def top_ten(subreddit):
     head = {'User-Agent': 'This-doesnt-matter'}
 
     try:
-        stuff = requests.get(url.format(subreddit), headers=head).json()
+        stuff = requests.get(url.format(subreddit), headers=head, allow_redirects=False).json()
         stuffplus = stuff.get('data').get('children')
         for titles in stuffplus:
             print(titles.get('data').get('title'))
