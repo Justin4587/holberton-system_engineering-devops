@@ -11,9 +11,12 @@ def top_ten(subreddit):
     try:
         stuff = requests.get(url.format(subreddit), headers=head,
                              allow_redirects=False).json()
-        """if stuff.status_code != 200:
-            print(None)
-            return"""
+        try:
+            if stuff.status_code != 200:
+                print(None)
+                return
+        except Exception:
+            pass
         stuffplus = stuff.get('data').get('children')
         for titles in stuffplus:
             print(titles.get('data').get('title'))
