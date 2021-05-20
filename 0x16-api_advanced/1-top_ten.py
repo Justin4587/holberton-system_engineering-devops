@@ -15,4 +15,4 @@ def top_ten(subreddit):
         for titles in stuffplus:
             print(titles.get('data').get('title'))
     except Exception:
-        return Ok
+        pass
